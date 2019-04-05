@@ -1,0 +1,8 @@
+123456789 Carlitos Guerrero Robles CS 5 300 
+201710101 Ian Arias Schreiber CS 5 100 
+201711111 Joe Acuña Acuña Industrial 3 80 
+201723456 Nicolas Chipana Menacho CS 1 500 
+123456789 Carlitos Guerrero Robles CS 5 300 
+201710101 Ian Arias Schreiber CS 5 100 
+201711111 Joe Acuña Acuña Industrial 3 80 
+201723456 Nicolas Chipana Menacho CS 1 500 
