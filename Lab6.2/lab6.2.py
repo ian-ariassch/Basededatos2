@@ -126,26 +126,26 @@ for x in keys50:
         i+=1
 i=0
 
-
-libro1=[]
-libro2=[]
-libro3=[]
-libro4=[]
-libro5=[]
-libro6=[]
-
+invertidos = {}
 for x in top50:
+    invertidos[x] = []
     if dictionary.get(x)[0] == 1:
-        libro1.append(x)
+        invertidos.get(x).append("libro1")
     if dictionary.get(x)[1] == 1:
-        libro2.append(x)
+        invertidos.get(x).append("libro2")
     if dictionary.get(x)[2] == 1:
-        libro3.append(x)
+        invertidos.get(x).append("libro3")
     if dictionary.get(x)[3] == 1:
-        libro4.append(x)
+        invertidos.get(x).append("libro4")
     if dictionary.get(x)[4] == 1:
-        libro5.append(x)
+        invertidos.get(x).append("libro5")
     if dictionary.get(x)[5] == 1:
-        libro6.append(x)
+        invertidos.get(x).append("libro6")
 
-print(libro1,"\n",libro2,"\n",libro3,"\n",libro4,"\n",libro5,"\n",libro6)
+stringY = ""
+for x in invertidos:
+    for y in invertidos.get(x):
+        stringY += y + ', '
+    print(x + ' -> ' + stringY)
+    stringY = ""
+
