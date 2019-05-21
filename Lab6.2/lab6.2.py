@@ -1,5 +1,33 @@
 import string
 import operator
+import itertools
+
+def AND(invertidos):
+
+    print("\n")
+    word1 = input()
+    word2 = input()
+    temp1 = []
+    temp2 = []
+    resultado = []
+    for x in invertidos:
+        if word1 == x:
+            temp1 = invertidos.get(x)
+        if word2 == x:
+            temp2 = invertidos.get(x)
+
+    for x, y in zip(temp1, temp2):
+        if x == y:
+            print(x + ' ' + y)
+            resultado.append(x)
+
+    return resultado
+
+
+
+
+
+
 
 SW = open("stopwords.txt", "r")
 file1 = open("libros/libro1.txt", "r")
@@ -130,17 +158,17 @@ invertidos = {}
 for x in top50:
     invertidos[x] = []
     if dictionary.get(x)[0] == 1:
-        invertidos.get(x).append("libro1")
+        invertidos.get(x).append('1')
     if dictionary.get(x)[1] == 1:
-        invertidos.get(x).append("libro2")
+        invertidos.get(x).append('2')
     if dictionary.get(x)[2] == 1:
-        invertidos.get(x).append("libro3")
+        invertidos.get(x).append('3')
     if dictionary.get(x)[3] == 1:
-        invertidos.get(x).append("libro4")
+        invertidos.get(x).append('4')
     if dictionary.get(x)[4] == 1:
-        invertidos.get(x).append("libro5")
+        invertidos.get(x).append('5')
     if dictionary.get(x)[5] == 1:
-        invertidos.get(x).append("libro6")
+        invertidos.get(x).append('6')
 
 stringY = ""
 for x in invertidos:
@@ -149,3 +177,4 @@ for x in invertidos:
     print(x + ' -> ' + stringY)
     stringY = ""
 
+print(AND(invertidos))
